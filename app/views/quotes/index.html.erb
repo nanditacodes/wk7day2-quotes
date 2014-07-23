@@ -1,0 +1,12 @@
+
+<div class="well">
+  <%= form_tag search_quotes_path, {method: :get} do %>
+
+      <%= label_tag :quote %>
+      <%= text_field_tag :body, params[:body] %>
+
+      <%= submit_tag "Run search", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+</div>
+<%= render partial: 'search_results' %>
